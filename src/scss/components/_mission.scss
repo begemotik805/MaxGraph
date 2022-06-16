@@ -1,6 +1,7 @@
 .mission {
     padding-bottom: 271px;
     background-color: var(--color-light);
+
     &__list {
         --mission-gap: 94px;
 
@@ -9,6 +10,7 @@
         margin-bottom: 27px;
         gap: calc(var(--mission-gap) * 2);
     }
+
     &__item {
         position: relative;
         padding-top: 71px;
@@ -16,6 +18,7 @@
         background-position: top center;
         background-size: 48px 48px;
         background-repeat: no-repeat;
+
         &:not(:last-child) {
             &::after {
                 content: "";
@@ -28,12 +31,15 @@
                 @include bg-cover;
             }
         }
+
         &--quality {
             background-image: url("../img/quality.svg");
         }
+
         &--safety {
             background-image: url("../img/safety.svg");
         }
+
         &--comfort {
             background-image: url("../img/comfort.svg");
         }
@@ -47,10 +53,17 @@
         line-height: 150%;
         color: var(--color-ebony);
     }
+
     &__descr {
         margin: 0;
         font-size: 16px;
         line-height: 160%;
         color: var(--color-storm);
+    }
+
+    .know-form {
+        &__content {
+            @include flex-v-center;
+        }
     }
 }
