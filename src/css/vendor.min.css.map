@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAP,sDAAO,CACP,OAAO,CAAP,2DAAO",
+    "sources": [
+        "../scss/vendor.scss"
+    ],
+    "names": [],
+    "file": "vendor.min.css"
+}
