@@ -1,10 +1,12 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+import { Swiper,  Autoplay, EffectFade, Navigation, Pagination, Thumbs } from 'swiper';
+Swiper.use([ EffectFade, Navigation, Pagination, Thumbs]);
 
 const bodyStyles = window.getComputedStyle(document.body);
 const gap = parseInt(bodyStyles.getPropertyValue('--grid-gap'));
 
 const portSlider = document.querySelector('.portfolio-section__items');
 const relatedSlider = document.querySelector('.related-projects__items');
+const workImages = document.querySelector('.work-images-slider');
 
 if (portSlider) {
     const portfolioSlider = new Swiper(portSlider, {
@@ -128,3 +130,23 @@ const testimonialsSlider = new Swiper('.testimonials__items', {
         prevEl: '.testimonials__prev',
     },
 });
+
+if (workImages) {
+    const workSlider = new Swiper('.work-images-nav', {
+        spaceBetween: 20,
+        slidesPerView: 10,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    const workSlidesNav = new Swiper(workImages, {
+        spaceBetween: 20,
+        slidesPerView: 1,
+        navigation: {
+            nextEl: ".work-images__next",
+            prevEl: ".work-images__prev",
+        },
+        thumbs: {
+            swiper: workSlider,
+        },
+    });
+}
