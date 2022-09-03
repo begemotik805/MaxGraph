@@ -39,6 +39,8 @@
 
         &:not(:last-child) {
             &::after {
+                @include bg-cover;
+
                 content: "";
                 position: absolute;
                 right: calc(-1 * var(--mission-gap));
@@ -46,7 +48,6 @@
                 width: 1px;
                 height: 100%;
                 background-image: url("../img/divider.svg");
-                @include bg-cover;
             }
         }
 

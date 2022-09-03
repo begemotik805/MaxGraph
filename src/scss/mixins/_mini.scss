@@ -1,3 +1,4 @@
+/* stylelint-disable CssSyntaxError */
 /* stylelint-disable */
 
 @mixin bg-cover {
@@ -43,8 +44,10 @@
 $browser-context: 16; // Default
 
 @function rem($pixels, $context: $browser-context) {
+    /* stylelint-disable-next-line CssSyntaxError */
     @return #{$pixels/$context}rem;
 }
+
 
 @mixin image-set($pathToImage) {
     background-image: url("#{$pathToImage}.jpg");

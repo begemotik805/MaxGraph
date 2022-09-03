@@ -25,9 +25,9 @@
     }
 
     &__item {
-        align-items: center;
-
         @include mb(118px);
+
+        align-items: center;
 
         &--reverse {
             .services__info {

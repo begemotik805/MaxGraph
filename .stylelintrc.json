@@ -532,7 +532,9 @@
         ]
       }
     ],
+    "alpha-value-notation": "number",
     "custom-property-pattern": null,
+    "color-function-notation": "legacy",
     "declaration-bang-space-after": "never",
     "declaration-bang-space-before": "always",
     "declaration-block-no-duplicate-properties": true,
@@ -582,7 +584,7 @@
     "function-url-no-scheme-relative": true,
     "function-url-quotes": "always",
     "function-whitespace-after": "always",
-    "indentation": 2,
+    "indentation": 4,
     "keyframe-declaration-no-important": true,
     "length-zero-no-unit": true,
     "max-empty-lines": 1,
@@ -738,8 +740,12 @@
     "scss/percent-placeholder-pattern": null,
     "scss/selector-no-redundant-nesting-selector": true
   },
-  "overrides": [{
-    "files": ["src/scss/*/**.scss"],
-    "customSyntax": "postcss-scss"
-  }]
+  "overrides": [
+    {
+      "files": [
+        "src/scss/*/**.scss"
+      ],
+      "customSyntax": "postcss-scss"
+    }
+  ]
 }

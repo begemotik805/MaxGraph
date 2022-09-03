@@ -21,6 +21,7 @@
         }
     }
 }
+
 .recent-article {
     overflow: hidden;
     border-radius: 4px;
@@ -49,7 +50,7 @@
     }
 
     &__link {
-        font-weight: bold;
+        font-weight: 700;
         font-size: 20px;
         line-height: 150%;
         color: var(--color-ebony);
@@ -69,6 +70,7 @@
         }
     }
 }
+
 .article-meta {
     font-size: 14px;
     line-height: 150%;
@@ -89,7 +91,7 @@
                 width: 1px;
                 height: 11px;
                 color: inherit;
-                background-color: currentColor;
+                background-color: currentcolor;
             }
         }
 

@@ -25,7 +25,7 @@
         color: var(--color-ebony);
 
         a {
-            border-bottom: 1px solid currentColor;
+            border-bottom: 1px solid currentcolor;
             color: var(--color-primary);
         }
     }
@@ -36,20 +36,20 @@
         right: 0%;
         top: 67.31%;
         bottom: 18.27%;
-        padding: 20px 0;
         display: flex;
         justify-content: center;
-        border-radius: 0px 0px 4px 4px;
+        border-radius: 0 0 4px 4px;
+        padding: 20px 0;
         background-color: var(--color-primary);
         opacity: 0;
     }
 
     &__link {
+        @include mr(12px);
+
         display: block;
         width: 20px;
         height: 20px;
-
-        @include mr(12px);
 
         svg {
             display: block;

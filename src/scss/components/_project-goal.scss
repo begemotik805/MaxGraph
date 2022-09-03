@@ -36,9 +36,9 @@
     background-color: var(--color-light);
 
     &__item {
-        display: flex;
-
         @include mb(17px);
+
+        display: flex;
     }
 
     &__category {

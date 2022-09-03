@@ -1,10 +1,10 @@
 .contacts-section {
+    @include bg-cover;
+
     padding-top: 80px;
     padding-bottom: 77px;
     background-image: url("../img/contacts-bg.jpg");
     background-color: var(--color-ebony);
-
-    @include bg-cover;
 
     &__form {
         background-color: var(--color-light);
@@ -24,14 +24,17 @@
     border-radius: 4px;
     padding: 48px 40px;
     min-width: 495px;
-    box-shadow: 0 60px 80px -20px rgba(30, 33, 44, 0.16), 0 26px 24px -10px rgba(30, 33, 44, 0.1),
-        0 12px 10px -6px rgba(30, 33, 44, 0.08), 0 4px 4px -4px rgba(30, 33, 44, 0.05);
+    box-shadow:
+        0 60px 80px -20px rgba(30, 33, 44, 0.16),
+        0 26px 24px -10px rgba(30, 33, 44, 0.1),
+        0 12px 10px -6px rgba(30, 33, 44, 0.08),
+        0 4px 4px -4px rgba(30, 33, 44, 0.05);
 
     &__title {
         margin: 0;
         margin-bottom: 24px;
         width: 100%;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 28px;
         line-height: 150%;
         text-align: center;

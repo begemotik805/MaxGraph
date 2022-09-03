@@ -60,7 +60,7 @@
     &__title {
         margin: 0;
         margin-bottom: 5px;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 20px;
         line-height: 150%;
         color: var(--color-ebony);
@@ -76,10 +76,10 @@
     &__btn {
         display: none;
         margin-top: 24px;
-        border: 1px solid currentColor;
+        border: 1px solid currentcolor;
         border-radius: 4px;
         padding: 13px 31px;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 14px;
         letter-spacing: 0.5px;
         text-transform: uppercase;

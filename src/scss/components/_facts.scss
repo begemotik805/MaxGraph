@@ -7,6 +7,8 @@
     background-color: var(--color-light);
 
     &::before {
+        @include bg-cover;
+
         content: "";
         position: absolute;
         left: -9px;
@@ -14,8 +16,6 @@
         width: 570px;
         height: 1065px;
         background-image: url("../img/facts_bg.png");
-
-        @include bg-cover;
     }
 
     &__list {

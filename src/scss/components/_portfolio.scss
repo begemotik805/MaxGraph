@@ -12,9 +12,9 @@
     transform: translateY(-60px);
 
     &__item {
-        width: calc((100% - (var(--gap) * 4)) / 5);
-
         @include mr(var(--gap));
+
+        width: calc((100% - (var(--gap) * 4)) / 5);
     }
 
     &__btn {
@@ -47,7 +47,7 @@
         width: 48px;
         height: 48px;
         color: inherit;
-        fill: currentColor;
+        fill: currentcolor;
         object-fit: cover;
         pointer-events: none;
     }
@@ -73,6 +73,7 @@
         }
 
         &--visible-more {
+            /* stylelint-disable-next-line declaration-no-important */
             display: block !important;
         }
     }
@@ -92,7 +93,7 @@
         width: 24px;
         height: 24px;
         color: inherit;
-        fill: currentColor;
+        fill: currentcolor;
         object-fit: cover;
     }
 }

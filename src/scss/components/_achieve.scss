@@ -81,6 +81,8 @@
         padding: 9px 53px;
 
         &::before {
+            @include bg-cover;
+
             content: "";
             position: absolute;
             left: -5px;
@@ -88,18 +90,16 @@
             width: 28px;
             height: 20px;
             background-image: url("../img/braces.svg");
-
-            @include bg-cover;
         }
 
         p {
+            @include mb(30px);
+
             margin: 0;
             font-weight: 700;
             font-size: 20px;
             line-height: 150%;
             color: var(--color-ebony);
-
-            @include mb(30px);
         }
     }
 
