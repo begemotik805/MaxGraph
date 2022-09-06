@@ -27,7 +27,7 @@
         font-size: 16px;
         line-height: 160%;
         text-align: center;
-        color: #9a9ca5;
+        color: var(--color-manatee);
         transition: color 0.3s ease-in-out;
 
         &--active {

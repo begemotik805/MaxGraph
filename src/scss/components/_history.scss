@@ -40,7 +40,7 @@
         top: 0;
         width: 1px;
         height: 100%;
-        background-color: rgba(#9a9ca5, 0.5);
+        background-color: rgb(var(--color-manatee) 0.5);
     }
 
     &__item {
@@ -53,7 +53,7 @@
         font-weight: 700;
         font-size: 28px;
         line-height: 150%;
-        color: #9a9ca5;
+        color: var(--color-manatee);
         transition: color 0.3s ease-in-out;
 
         &::before {
