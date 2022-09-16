@@ -111,12 +111,12 @@ a {
 .main-title {
     margin: 0;
     margin-bottom: 25px;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 72px;
     line-height: 130%;
     letter-spacing: 1px;
-    color: var(--color-ebony);
     text-transform: uppercase;
+    color: var(--color-ebony);
 
     span {
         color: var(--color-primary);
@@ -141,12 +141,12 @@ a {
 
 .btn {
     display: inline-block;
-    border-width: 1px;
     border-style: solid;
+    border-width: 1px;
     border-color: transparent;
     border-radius: 4px;
     padding: 15px 39px;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.5px;
@@ -173,7 +173,7 @@ a {
 .title {
     margin: 0;
     margin-bottom: 25px;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 46px;
     line-height: 130%;
     color: var(--color-ebony);
@@ -201,8 +201,8 @@ a {
 
 .custom-checkbox {
     &__input {
-        opacity: 0;
         position: absolute;
+        opacity: 0;
     }
 
     &__text {
@@ -213,6 +213,7 @@ a {
         line-height: 150%;
         color: var(--color-gray);
     }
+
     &__text::before {
         content: "";
         position: absolute;
@@ -243,6 +244,62 @@ a {
 
     &__input:checked + &__text::before {
         background-color: var(--color-primary);
+    }
+
+    &__input:checked + &__text::after {
+        opacity: 1;
+    }
+
+    &__input:focus + &__text {
+        outline: 3px solid var(--color-primary);
+    }
+}
+
+.custom-radio {
+    &__input {
+        position: absolute;
+        opacity: 0;
+    }
+
+    &__text {
+        position: relative;
+        display: inline-block;
+        padding-left: 27px;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-gray);
+    }
+
+    &__text::before {
+        content: "";
+        position: absolute;
+        left: -1px;
+        top: 4px;
+        display: inline-block;
+        border: 1px solid #b3b7bc;
+        border-radius: 100%;
+        width: 16px;
+        height: 16px;
+        transition: border-color 0.3s ease-in-out;
+    }
+
+    &__text::after {
+        content: "";
+        position: absolute;
+        left: -1px;
+        top: 4px;
+        width: 16px;
+        height: 16px;
+        background-image: url("../img/check-circle.svg");
+        background-position: center;
+        background-size: 8px 8px;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &__input:checked + &__text::before {
+        border: 1px solid var(--color-primary);
     }
 
     &__input:checked + &__text::after {

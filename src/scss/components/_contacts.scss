@@ -54,9 +54,8 @@
     }
 
     &__bottom {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex-all-sb;
+
         padding-top: 39px;
 
         @include mobile {
@@ -112,9 +111,7 @@
     }
 
     &__radio {
-        &:not(:last-child) {
-            margin-right: 22px;
-        }
+        @include mr(22px);
     }
 
     .choices {
