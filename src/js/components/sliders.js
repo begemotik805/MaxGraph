@@ -1,5 +1,5 @@
 import { Swiper,  Autoplay, EffectFade, Navigation, Pagination, Thumbs } from 'swiper';
-Swiper.use([ EffectFade, Navigation, Pagination, Thumbs]);
+Swiper.use([ EffectFade, Navigation, Pagination, Thumbs, Autoplay]);
 
 const bodyStyles = window.getComputedStyle(document.body);
 const gap = parseInt(bodyStyles.getPropertyValue('--grid-gap'));
@@ -190,3 +190,36 @@ if (historySlider) {
         });
     });
 }
+
+const heroSliderSpeed = 1500;
+
+const fooBar = bodyStyles.getPropertyValue('--hero-slider-speed');
+
+document.body.style.setProperty('--hero-slider-speed', heroSliderSpeed + 'ms');
+
+const heroSlider = new Swiper('.hero-slider', {
+    modules: [Navigation, Pagination],
+    slidesPerView: 1,
+    navigation: {
+        nextEl: '.hero__next',
+        prevEl: '.hero__prev',
+    },
+    speed: heroSliderSpeed,
+    autoplay: {
+        delay: 1000,
+    },
+    pagination: {
+        el: '.hero__pag',
+        type: 'bullets',
+        clickable: true
+    },
+    on: {
+        init: function () {
+            const paginationBullets = document.querySelectorAll('.hero__pag .swiper-pagination-bullet');
+
+            paginationBullets.forEach(el => {
+                el.innerHTML = `<span class="hero__bar"></span>`;
+            });
+        },
+    },
+});
