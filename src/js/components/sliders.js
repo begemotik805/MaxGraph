@@ -1,5 +1,5 @@
-import { Swiper,  Autoplay, EffectFade, Navigation, Pagination, Thumbs } from 'swiper';
-Swiper.use([ EffectFade, Navigation, Pagination, Thumbs, Autoplay]);
+import { Swiper, Autoplay, EffectFade, Navigation, Pagination, Thumbs } from 'swiper';
+Swiper.use([EffectFade, Navigation, Pagination, Thumbs, Autoplay]);
 
 const bodyStyles = window.getComputedStyle(document.body);
 const gap = parseInt(bodyStyles.getPropertyValue('--grid-gap'));
@@ -12,7 +12,7 @@ const historySlider = document.querySelector('.history-slider');
 if (portSlider) {
     const portfolioSlider = new Swiper(portSlider, {
         modules: [Navigation, Pagination],
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: gap,
         on: {
             init: function () {
@@ -31,6 +31,14 @@ if (portSlider) {
             nextEl: '.portfolio-section__next',
             prevEl: '.portfolio-section__prev',
         },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            }
+        }
     });
 
     document.querySelector('.portfolio-section__prev').addEventListener('click', () => {

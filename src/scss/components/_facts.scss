@@ -24,6 +24,10 @@
         margin: 0 auto;
         max-width: 736px;
         gap: 48px;
+
+        @include small-tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__title {
@@ -94,5 +98,9 @@
         line-height: 150%;
         text-align: center;
         color: var(--color-ebony);
+    }
+
+    @include small-tablet {
+        @include flex-column-center;
     }
 }

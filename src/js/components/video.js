@@ -11,7 +11,7 @@ if (videoBlock) {
         playBtn.classList.add('video-block__play--played');
     });
 
-    video.onpause = function() {
+    video.onpause = function () {
         videoBlock.classList.remove('video-block--played');
         video.controls = false;
         playBtn.classList.remove('video-block__play--played');

@@ -32,7 +32,6 @@
     }
 
     &__btn {
-        // display: none;
         margin-top: 24px;
         margin-bottom: -68px;
         border: 1px solid currentcolor;
@@ -45,6 +44,10 @@
         color: var(--color-primary);
         transition: 0.3s ease-in-out;
         will-change: margin;
+
+        @include small-tablet {
+            margin-bottom: 0;
+        }
     }
 
     &:focus {

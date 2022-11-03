@@ -27,6 +27,10 @@
 
     &__form {
         grid-column: 5 span;
+
+        @include small-tablet {
+            grid-column: 12 span;
+        }
     }
 
     &__address {
@@ -148,7 +152,13 @@
     padding-left: 54px;
 
     &__col {
-        @include mr(125px);
+        &:not(:last-child) {
+            margin-right: 125px;
+
+            @include small-tablet {
+                margin-right: 65px;
+            }
+        }
     }
 
     &__item {
@@ -173,5 +183,9 @@
         &:active {
             color: var(--color-light);
         }
+    }
+
+    @include small-tablet {
+        padding-left: 24px;
     }
 }
