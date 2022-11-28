@@ -17,6 +17,10 @@
                 visibility: visible;
             }
         }
+
+        @include tablet {
+            grid-column: 6 span;
+        }
     }
 
     &__text {
@@ -49,6 +53,10 @@
         position: relative;
         margin-bottom: 12px;
         font-size: 0;
+
+        @include tablet {
+            text-align: center;
+        }
     }
 
     &__socials {

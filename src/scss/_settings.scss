@@ -226,6 +226,11 @@ a {
     &--center {
         text-align: center;
     }
+
+    @include mobile {
+        font-size: 28px;
+        line-height: 40px;
+    }
 }
 
 .descr {
@@ -238,6 +243,12 @@ a {
     &--center {
         text-align: center;
     }
+
+    @include mobile {
+        margin-bottom: 25px;
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
 .section-offset {
@@ -245,6 +256,10 @@ a {
 
     @include small-tablet {
         padding-top: 60px;
+    }
+
+    @include mobile {
+        padding-top: 40px;
     }
 }
 
@@ -390,6 +405,10 @@ a {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--grid-gap);
+
+    @include mobile {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .to-top {
@@ -540,6 +559,12 @@ a {
         padding-right: 10px;
         background-color: var(--color-athens);
     }
+
+    @include mobile {
+        padding: 20px;
+        padding-top: 40px;
+        width: 90%;
+    }
 }
 
 .burger {
@@ -614,4 +639,30 @@ a {
 
 .burger:focus::after {
     opacity: 1;
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 500;
+    background-color: rgba(#000, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+    &--active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.modal {
+    @include mobile {
+        &::before {
+            display: none;
+        }
+    }
 }

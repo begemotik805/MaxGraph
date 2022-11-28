@@ -12,6 +12,12 @@
         transform: translate(12px, 4px);
     }
 
+    &__content {
+        @include small-tablet {
+            display: block;
+        }
+    }
+
     &__item {
         grid-column: 8 span;
         overflow: hidden;
@@ -92,6 +98,14 @@
 
         &--active {
             color: var(--color-primary);
+        }
+
+        @include tablet {
+            font-size: 22px;
+        }
+
+        @include small-tablet {
+            margin-bottom: 30px;
         }
     }
 }

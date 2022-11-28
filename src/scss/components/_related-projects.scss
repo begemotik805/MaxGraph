@@ -8,10 +8,19 @@
         align-items: flex-end;
         justify-content: space-between;
         margin-bottom: 48px;
+
+        @include mobile {
+            display: block;
+            margin-bottom: 25px;
+        }
     }
 
     .slider-nav {
         transform: translateX(12px);
+
+        @include mobile {
+            transform: none;
+        }
     }
 
     &__title {
@@ -64,6 +73,14 @@
         font-size: 20px;
         line-height: 150%;
         color: var(--color-ebony);
+
+        @include desktop {
+            font-size: 18px;
+        }
+
+        @include small-tablet {
+            min-height: 52px;
+        }
     }
 
     &__descr {

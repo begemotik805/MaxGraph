@@ -27,6 +27,18 @@
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 27px;
         gap: calc(var(--mission-gap) * 2);
+
+        @include tablet {
+            --mission-gap: 30px;
+        }
+
+        @include small-tablet {
+            --mission-gap: 10px;
+        }
+
+        @include mobile {
+            display: block;
+        }
     }
 
     &__item {
@@ -48,6 +60,10 @@
                 width: 1px;
                 height: 100%;
                 background-image: url("../img/divider.svg");
+
+                @include mobile {
+                    display: none;
+                }
             }
         }
 
@@ -61,6 +77,10 @@
 
         &--control {
             background-image: url("../img/control.svg");
+        }
+
+        @include mobile {
+            @include mb(30px);
         }
     }
 

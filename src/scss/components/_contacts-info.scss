@@ -10,6 +10,14 @@
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 118px;
         gap: calc(var(--contacts-gap) * 2);
+
+        @include desktop {
+            --contacts-gap: 40px;
+        }
+
+        @include small-tablet {
+            display: block;
+        }
     }
 
     &__soc {
@@ -49,6 +57,10 @@
                 height: 100%;
                 background-image: url("../img/divider.svg");
             }
+        }
+
+        @include small-tablet {
+            @include mb(30px);
         }
     }
 

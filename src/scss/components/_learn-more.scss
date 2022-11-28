@@ -14,5 +14,15 @@
             max-width: 50%;
             line-height: 40px;
         }
+
+        @include mobile {
+            margin-right: 0;
+            margin-bottom: 10px;
+            max-width: none;
+        }
+    }
+
+    @include mobile {
+        display: block;
     }
 }

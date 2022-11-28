@@ -9,6 +9,18 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: calc(var(--mission-gap) * 2);
+
+        @include tablet {
+            --mission-gap: 30px;
+        }
+
+        @include small-tablet {
+            --mission-gap: 10px;
+        }
+
+        @include mobile {
+            display: block;
+        }
     }
 
     &__item {
@@ -43,6 +55,10 @@
 
         &--comfort {
             background-image: url("../img/comfort.svg");
+        }
+
+        @include mobile {
+            @include mb(30px);
         }
     }
 

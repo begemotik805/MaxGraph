@@ -144,12 +144,12 @@
     background-image: url("../img/bg-image.jpg");
     background-color: var(--color-gray);
 
-    @include mobile {
-        padding: 100px 0;
-    }
-
     @include small-tablet {
         padding-top: 200px;
         padding-bottom: 200px;
+    }
+
+    @include mobile {
+        padding: 100px 0;
     }
 }

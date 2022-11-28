@@ -28,10 +28,28 @@
         @include small-tablet {
             grid-template-columns: repeat(2, 1fr);
         }
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    &__item {
+        @include mobile {
+            @include mb(30px);
+        }
     }
 
     &__title {
         margin-bottom: 68px;
+
+        @include mobile {
+            margin-bottom: 25px;
+        }
+    }
+
+    @include mobile {
+        padding: 40px 0;
     }
 }
 

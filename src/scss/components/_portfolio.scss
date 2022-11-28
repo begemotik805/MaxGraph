@@ -15,6 +15,16 @@
         @include mr(var(--gap));
 
         width: calc((100% - (var(--gap) * 4)) / 5);
+
+        @include small-tablet {
+            margin-bottom: 20px;
+            width: calc((100% - (var(--gap) * 2)) / 3);
+        }
+
+        @include mobile {
+            margin-right: 0 !important;
+            width: 100%;
+        }
     }
 
     &__btn {
@@ -71,6 +81,13 @@
         color: var(--color-manatee);
         transition: color 0.3s ease-in-out;
         pointer-events: none;
+    }
+
+    @include small-tablet {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 30px;
+        transform: none;
     }
 }
 
